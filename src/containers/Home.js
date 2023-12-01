@@ -1,8 +1,8 @@
-import Task from "./AddTask";
+import AddTask from "./AddTask";
 const Home = () => {
   return (
     <div>
-      <Task />
+      <AddTask />
     </div>
   );
 };

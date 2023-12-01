@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 
-const Task = () => {
+const Task = ({data}) => {
     const [list, setList] = useState(null);
-
+    if(!list){
+        getList();
+    }
     useEffect(() => {
         // Fetch the list when the component mounts
-        getList();
-    }, []);
+        setList(data)
+    }, [data]);
 
     async function getList() {
         try {
@@ -14,10 +16,10 @@ const Task = () => {
                 method: 'GET',
                 redirect: 'follow'
             };
-
+    
             const response = await fetch("http://localhost:3000/api/readAll.php", requestOptions);
             const data = await response.json();
-
+    
             // Update the state with the fetched list
             setList(data);
         } catch (error) {
