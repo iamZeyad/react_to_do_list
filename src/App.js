@@ -22,7 +22,7 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/containers/About" element={<About />} />
+            <Route path="/About" element={<About />} />
           </Routes>
         </main>
         <footer>
