@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Task from "./Task";
-const AddTask = () => {
+const Input = () => {
   const [input, setInput] = useState(null);
   const [list, setList] = useState(null);
 
@@ -78,4 +78,4 @@ const AddTask = () => {
     </>
   );
 };
-export default AddTask;
+export default Input;

@@ -1,8 +1,8 @@
-import AddTask from "./AddTask";
+import Input from "./Input";
 const Home = () => {
   return (
     <div>
-      <AddTask />
+      <Input />
     </div>
   );
 };
